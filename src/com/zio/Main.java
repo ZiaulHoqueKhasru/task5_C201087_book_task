@@ -1,6 +1,6 @@
 package com.zio;
 
-public class Main extends BookC201087  {
+public class Main extends BookC201087 implements Printable  {
 
     public static void main(String[] args) {
 
@@ -14,6 +14,16 @@ public class Main extends BookC201087  {
         System.out.println(obj.getName()+' '+"book author id is "+obj.bookWriterId);
         System.out.println("You have to pay total : "+cost.add(obj.mainPrice(),obj.fridayDiscount(),cost.tex)+"taka where "+cost.tex+" tax added");
         System.out.println("Enjoy The Book:) ");
-
+        Printable pr =new Main();
+        pr.BookSuggetions();
     }
+
+    @Override
+    public void BookSuggetions() {
+        System.out.println("Some other books of these writer is:");
+        System.out.println("1.Life is Hell in IIUC\n"+"2.Life is great without GirlFriend:)" );
+    }
+
+
+
 }
